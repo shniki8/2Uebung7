@@ -14,4 +14,14 @@ public class Kinoticket {
     public int hashCode() {
         return Objects.hash(date,time,seat);
     }
+
+    @Override
+    public String toString() {
+        return date+ ", " + time + ", " + seat;
+    }
+
+    @Override
+    public boolean equals(Object obj) { // Benoetigt! Sonst Duplikate moeglich!
+        return hashCode() == obj.hashCode();
+    }
 }

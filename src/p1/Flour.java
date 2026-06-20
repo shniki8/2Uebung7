@@ -14,4 +14,9 @@ public class Flour extends PFood{
         }
         return 0;
     }
+
+    @Override
+    public String getName() {
+        return "Flour";
+    }
 }

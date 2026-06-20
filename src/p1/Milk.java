@@ -14,6 +14,10 @@ public class Milk extends PFood{
             return 12;
         }
         return 0;
+    }
 
+    @Override
+    public String getName() {
+        return "Milk";
     }
 }

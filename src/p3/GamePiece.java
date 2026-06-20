@@ -42,7 +42,7 @@ public class GamePiece {
         return new GamePiece(MutationStage.NORMAL);
     }
 
-    public GamePiece moreMutated(GamePiece a, GamePiece b){
+    public static GamePiece moreMutated(GamePiece a, GamePiece b){
         int result = a.stage.compareTo(b.stage);
         if (result == -1){
             return b;
@@ -51,6 +51,13 @@ public class GamePiece {
             return a;
         }
         else return a;
+    }
+    public static GamePiece mostMutated(GamePiece... pieces){
+        GamePiece max = new GamePiece(MutationStage.FOOTNOTE);
+        for (GamePiece p : pieces){
+            max = moreMutated(p,max);
+        }
+        return max;
     }
     //Zur e): moreMutated funktioniert weiterhin, falls das Einfuegen in order geschieht. Die anderen Methoden decken den neuen Fall nicht bzw. falsch ab und müssten erneuert werden.
 }

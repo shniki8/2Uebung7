@@ -4,4 +4,5 @@ public abstract class Article {
     int  disQuantity, household;
     abstract int discountQuantity();
     abstract boolean warning();
+    public abstract String getName();
 }

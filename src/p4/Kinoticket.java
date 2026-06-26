@@ -22,6 +22,8 @@ public class Kinoticket {
 
     @Override
     public boolean equals(Object obj) { // Benoetigt! Sonst Duplikate moeglich!
-        return hashCode() == obj.hashCode();
+        return hashCode() == obj.hashCode(); //Diese Implementation funktioniert bis zu einer Anzahl von 2^32 Kinotickets.
+        //Schöner wäre: return ((Kinoticket)(obj)).date == date && ((Kinoticket)(obj)).time == time && ((Kinoticket)(obj)).seat == seat;
+        //Dies funktioniert immer.
     }
 }

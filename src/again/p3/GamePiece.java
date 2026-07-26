@@ -14,6 +14,17 @@ public class GamePiece {
             stage = MutationStage.values()[stage.ordinal()+1];
         }
     }
+    public static GamePiece mostMutated(GamePiece... pieces){
+        GamePiece max = pieces[0];
+        for (GamePiece gp : pieces){
+            if (gp.stage.ordinal() > max.stage.ordinal()){
+                max = gp;
+                if (max.stage.ordinal() == MutationStage.values().length) break;
+            }
+        }
+        return max;
+    }
+
     public static GamePiece randomPiece(){
         return new GamePiece(MutationStage.values()[new Random().nextInt(MutationStage.values().length)]);
     }

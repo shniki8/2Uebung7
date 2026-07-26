@@ -7,7 +7,6 @@ public class Main {
 
     public static void main(String[] args) {
         HashSet<Kinoticket> hs = new HashSet<>();
-
         hs.add(new Kinoticket(1,18,69));
         hs.add(new Kinoticket(1,18,69));
         hs.add(new Kinoticket(1,18,69));

@@ -27,6 +27,8 @@ public class GamePiece {
                 return a;
             case -1:
                 return b;
+            default:
+                return null; // Have fun :D
         }
     }
 }

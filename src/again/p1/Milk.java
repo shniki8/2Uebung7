@@ -9,6 +9,11 @@ public class Milk extends PFood{
     }
 
     @Override
+    String getName() {
+        return "Milk";
+    }
+
+    @Override
     int discountQuantity() {
         return (amount >= disQuantity) ? 12 : 0 ;
     }

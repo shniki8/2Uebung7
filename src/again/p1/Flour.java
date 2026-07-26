@@ -9,6 +9,10 @@ public class Flour extends PFood{
         household = 15;
     }
     @Override
+    String getName() {
+        return "Flour";
+    }
+    @Override
     int discountQuantity() {
         return (amount >= disQuantity) ? 5 : 0 ;
     }
